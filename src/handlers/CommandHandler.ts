@@ -15,7 +15,6 @@ export default class CommandHandler {
         for (const file of files) {
             const Command = (await import(`../.${file}`)).default; // src/dir/file.js -> dir/file.js
             const cmd = new Command();
-            console.log(cmd.name);
             CommandHandler.commands.set(cmd.name, cmd);
         }
 

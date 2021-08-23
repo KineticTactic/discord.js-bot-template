@@ -10,6 +10,6 @@ export default class MessageCreateEvent extends Event {
     }
 
     override async call(message: Discord.Message) {
-        console.log(message.content);
+        if (message.author.bot) return;
     }
 }

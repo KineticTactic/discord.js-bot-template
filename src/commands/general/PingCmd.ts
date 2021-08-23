@@ -10,7 +10,7 @@ export default class PingCmd extends Command {
         });
     }
 
-    override call(interaction: Discord.CommandInteraction) {
-        interaction.reply("Pong!");
+    override async call(interaction: Discord.CommandInteraction) {
+        await interaction.reply("Pong!");
     }
 }
