@@ -1,0 +1,27 @@
+{
+    "name": "discord.js-bot-template",
+    "version": "1.0.0",
+    "description": "A modern discord bot template using the latest discord.js library.",
+    "main": "index.js",
+    "repository": "https://github.com/KineticTactic/discord.js-bot-template.git",
+    "author": "KineticTactic <63810712+KineticTactic@users.noreply.github.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "start:dev": "nodemon",
+        "build": "rimraf ./build && tsc",
+        "start": "npm run build && node build/index.js"
+    },
+    "devDependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/node": "^16.7.1",
+        "nodemon": "^2.0.12",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {
+        "discord.js": "^13.1.0",
+        "dotenv": "^10.0.0"
+    }
+}
