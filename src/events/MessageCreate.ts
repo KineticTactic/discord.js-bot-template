@@ -9,7 +9,7 @@ export default class MessageCreateEvent extends Event {
         });
     }
 
-    async call(message: Discord.Message) {
+    override async call(message: Discord.Message) {
         console.log(message.content);
     }
 }

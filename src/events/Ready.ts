@@ -1,6 +1,7 @@
 import Discord from "discord.js";
 
 import Event from "../base/Event";
+import CommandHandler from "../handlers/CommandHandler";
 
 export default class ReadyEvent extends Event {
     constructor() {
@@ -10,7 +11,9 @@ export default class ReadyEvent extends Event {
         });
     }
 
-    async call(client: Discord.Client) {
+    override async call(client: Discord.Client) {
         console.log(`Logged in as ${client.user!.username}#${client.user!.discriminator}`);
+
+        await CommandHandler.init(client);
     }
 }
