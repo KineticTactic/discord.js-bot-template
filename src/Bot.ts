@@ -28,7 +28,7 @@ export default class Bot {
         EventHandler.init(this.client);
     }
 
-    run() {
-        this.client.login(this.token);
+    async run(): Promise<void> {
+        return this.client.login(this.token);
     }
 }
