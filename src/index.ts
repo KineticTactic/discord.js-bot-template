@@ -7,5 +7,5 @@ const bot = new Bot(process.env.BOT_TOKEN!);
 
 (async () => {
     await bot.init();
-    bot.run();
+    await bot.run();
 })();
